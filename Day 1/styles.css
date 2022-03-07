@@ -1,0 +1,25 @@
+.img {
+    width: 180px;
+    border-radius: 50%;
+}
+
+.ul {
+    list-style: none;
+}
+
+.t {
+    margin: 20px 43px;
+}
+
+.skills {
+    margin-left: 10px;
+}
+
+div {
+    margin: 4px 0px;
+}
+
+.message {
+    width: 495px;
+    height: 292px;
+}
