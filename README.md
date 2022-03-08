@@ -4,4 +4,6 @@
   <li> 
 <p><strong> Day 1 ---> Made an Cv Website Using just the Html and little bit of CSS. </strong> </p>
   </li>
+  <li>
+    <strong> Day 2 ---> Improved the CV design and made it look more professional.
 </ul>
