@@ -1,0 +1,19 @@
+.container {
+    max-width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: tomato;
+}
+
+.container button {
+    margin: 2% 3%;
+    padding: 7px 10px;
+    border-radius: 8px;
+}
+
+.container button a {
+    text-decoration: none;
+}
