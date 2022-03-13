@@ -65,6 +65,7 @@ h3 {
 
 .title-img {
     width: 329px;
+    /* width: 60%; */
     transform: rotate(25deg);
     position: absolute;
     /* right: 30%; */
