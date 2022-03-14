@@ -9,10 +9,6 @@ body {
     color: black;
 }
 
-section {
-    padding: 1%;
-}
-
 h2,
 h3,
 h4,
@@ -39,6 +35,8 @@ p {
 #top {
     /* text-align: center; */
     text-align: left;
+    background-color: #e6e6e6;
+    padding: 1%;
 }
 
 .title {
@@ -71,7 +69,7 @@ p {
 }
 
 .title-heading::before {
-    background-color: white;
+    background-color: #e6e6e6;
     /* background-color: teal; */
     animation: typewriter 6s forwards steps(32) 3s infinite;
 }
