@@ -9,6 +9,10 @@ body {
     color: black;
 }
 
+section {
+    padding: 1%;
+}
+
 h2,
 h3,
 h4,
@@ -155,9 +159,13 @@ p {
 
 /* media queries... */
 
-@media (max-width: 750px) {
+@media (max-width: 1108px) {
     .title-heading {
         width: 100%;
+        font-size: 2.5rem;
+    }
+    .title-p {
+        font-size: 1.1rem;
     }
 }
 
@@ -165,5 +173,11 @@ p {
     .title-heading::before,
     .title-heading::after {
         visibility: hidden;
+    }
+    .title-heading {
+        font-size: 2rem;
+    }
+    .title-p {
+        font-size: 1rem;
     }
 }
