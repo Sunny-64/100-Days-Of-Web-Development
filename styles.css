@@ -38,8 +38,9 @@ p {
 }
 
 .title {
-    width: 60%;
-    margin: 0 auto;
+    /* width: 65%; */
+    /* margin: 0 auto; */
+    text-align: center;
 }
 
 .title-heading {
@@ -48,9 +49,11 @@ p {
     position: relative;
     font-family: 'Montserrat';
     /* color: #252839; */
-    /* min-width: max-content; The property should take the maximum width of this heading. but didn't*/
+    /* max-width: max-content; */
+    /* The property should take the maximum width of this heading. but didn't */
     display: inline-block;
-    width: 90%;
+    width: 61%;
+    font-family: 'Source-sans', monospace;
 }
 
 .title-heading::before,
@@ -66,14 +69,14 @@ p {
 .title-heading::before {
     background-color: white;
     /* background-color: teal; */
-    animation: typewriter 6s forwards steps(29) 1s infinite;
+    animation: typewriter 6s forwards steps(32) 3s infinite;
 }
 
 .title-heading::after {
     width: 0.125em;
     background-color: black;
     color: black;
-    animation: typewriter 6s forwards steps(29) 1s infinite, blink 500ms forwards steps(29) infinite;
+    animation: typewriter 6s forwards steps(32) 3s infinite, blink 500ms forwards steps(29) infinite;
 }
 
 @keyframes typewriter {
@@ -90,6 +93,7 @@ p {
 
 .title p {
     margin-top: 1%;
+    color: #757171;
 }
 
 
@@ -101,9 +105,14 @@ p {
 }
 
 .container {
-    width: 65%;
+    /* width: 70%;
     margin: 0 auto;
-    text-align: left;
+    text-align: left; */
+    text-align: center;
+}
+
+.main-ul {
+    padding-left: 0;
 }
 
 .main-li {
@@ -112,7 +121,7 @@ p {
 }
 
 .main-li button {
-    min-width: 140px;
+    min-width: 130px;
     padding: 12px 0;
     font-size: 1.15rem;
     background-color: black;
@@ -131,8 +140,30 @@ p {
 .main-li button a {
     text-decoration: none;
     color: white;
+    padding: 12px 38px;
+    font-family: 'source-sans', monospace;
+    font-weight: 700;
 }
 
 .main-li button:hover>a {
     color: black;
+}
+
+
+/* footer */
+
+
+/* media queries... */
+
+@media (max-width: 750px) {
+    .title-heading {
+        width: 100%;
+    }
+}
+
+@media (max-width:475px) {
+    .title-heading::before,
+    .title-heading::after {
+        visibility: hidden;
+    }
 }
