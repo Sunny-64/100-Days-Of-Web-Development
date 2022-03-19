@@ -8,6 +8,9 @@
     <p><strong> Day 2 ---> Improved the CV design and made it look more professional. </strong> </p>
   </li>
    <li>
-    <p><strong> Day 3,4,5 ---> Made a tindog project using bootstrap 5.</strong> </p>
+    <p><strong> Day 3 ---> Made a tindog project using bootstrap 5.</strong> </p>
+  </li>
+   <li>
+    <p><strong> Day 4 ---> Made a Dice game.</strong> </p>
   </li>
 </ul>
