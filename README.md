@@ -13,4 +13,7 @@
    <li>
     <p><strong> Day 4 ---> Made a Dice game.</strong> </p>
   </li>
+   <li>
+    <p><strong> Day 5 ---> Made a Drum kit.</strong> </p>
+  </li>
 </ul>
