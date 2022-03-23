@@ -16,4 +16,7 @@
    <li>
     <p><strong> Day 5 ---> Made a Drum kit.</strong> </p>
   </li>
+   <li>
+    <p><strong> Day 6 ---> Made Simon Game.</strong> </p>
+  </li>
 </ul>
