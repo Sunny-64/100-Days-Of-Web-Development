@@ -1,0 +1,63 @@
+body {
+    /* background: url("images/josh-nuttall-eTrHMJwI5ro-unsplash.jpg"); */
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+    background-color: #eaeaea;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.heading {
+    font-size: 4rem;
+    color: #252A34;
+    font-family: 'Oswald';
+    font-weight: 600;
+    margin-bottom: 1%;
+    margin-top: 2%;
+}
+
+.heading-p {
+    color: #2e3239bd;
+    /* font-family: 'Oswald'; */
+    font-weight: 400;
+    font-size: 1.056rem;
+}
+
+#formData {
+    display: flex;
+    /* width: 100%; */
+    justify-content: center;
+    margin-top: 4%;
+}
+
+.input {
+    margin: 14px 0px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+#form {
+    width: 25%;
+}
+
+.text-fields {
+    padding: 2.5% 8%;
+    margin-left: 20px;
+}
+
+button {
+    padding: 3% 10%;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 3%;
+    background: #FF2E63;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+footer {
+    margin-top: 15%;
+    text-align: center;
+}
