@@ -1,0 +1,19 @@
+{
+    "name": "portfolio",
+    "version": "1.0.0",
+    "description": "Portfolio website using tailwind css",
+    "main": "index.js",
+    "scripts": {
+        "start": "vite"
+    },
+    "author": "sunny",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^10.4.4",
+        "postcss": "^8.4.12",
+        "tailwindcss": "^3.0.23"
+    },
+    "dependencies": {
+        "vite": "^2.8.6"
+    }
+}
