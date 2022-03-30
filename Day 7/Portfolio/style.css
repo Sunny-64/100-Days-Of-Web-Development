@@ -124,7 +124,7 @@
 
 .btn:hover {
     background: #f3f3f3;
-    transition: 0.8 ease-in-out;
+    transition: 0.5 ease-in-out;
 }
 
 .profile-links1:hover {
@@ -139,4 +139,13 @@
 
 .profile-links3 i:hover {
     color: #eea302;
+}
+
+
+/* Responsive */
+
+.ham-burger {
+    color: black;
+    height: 5px;
+    width: 10px;
 }
