@@ -176,8 +176,10 @@
 
 .main-text {
     font-size: 0.9rem;
+    /* font-weight: 200; */
     margin: left 2px;
     color: #625e57;
+    line-height: 1.5;
 }
 
 .btn {
