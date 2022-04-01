@@ -1,0 +1,268 @@
+/* Global classes */
+
+.noto-sans-font {
+    font-family: 'Noto Sans Jp';
+}
+
+
+/* Body */
+
+.bg {
+    background: #f3f3f3;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* navigation Bar */
+
+.navigation {
+    min-width: 245px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 0;
+    align-items: center;
+}
+
+.navigation-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Left side of the navigation bar */
+
+.left-side-nav {
+    display: flex;
+    align-items: center;
+    margin-left: 2.5%;
+    justify-content: center;
+}
+
+.yellow-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    color: #eea302;
+    background: #eea302;
+    margin: 3px 3px 0 3px;
+}
+
+.name {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 0 3px 0 3px;
+}
+
+.profession {
+    align-items: baseline;
+    margin: 5% 2px 0 2px;
+    color: #403939;
+}
+
+
+/* right side of the navigation bar */
+
+.right-side-nav {
+    display: flex;
+}
+
+.nav-ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-right: 1.5rem;
+}
+
+.nav-li {
+    list-style: none;
+    margin: 0 30px;
+}
+
+.nav-links {
+    text-decoration: none;
+    font-weight: 100;
+    color: #403939
+}
+
+.bars {
+    font-size: 1.3rem;
+}
+
+.ham-burger {
+    display: none;
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+}
+
+.ham-open .line1 {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.ham-open .line2 {
+    width: 0;
+}
+
+.ham-open .line3 {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.lines {
+    width: 30px;
+    height: 3px;
+    background: #000;
+    display: block;
+    margin: 5px 0;
+    transition: transform 1s, width 0.5s;
+}
+
+
+/*
+.ham-burger {
+    display: none;
+    cursor: pointer;
+}
+
+.lines {
+    display: block;
+    width: 36px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px auto;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.mr {
+    margin-right: 1rem;
+}
+
+ @media only screen and (max-width: 1029px) {
+    .ham-burger {
+        display: block;
+    }
+    .ham-burger .active .lines:nth-child(2) {
+        opacity: 0;
+    }
+    .ham-burger .active .lines:nth-child(1) {
+        transform: translatey(8px) rotate(45deg);
+    }
+    .ham-burger .active .lines:nth-child(3) {
+        transform: translatey(-8px) rotate(-45deg);
+    }
+    .nav-ul {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #000000;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .nav-li {
+        margin: 1rem 0;
+    }
+    .nav-ul .active {
+        left: 0;
+    }
+} */
+
+
+/* .nav-li a:hover {
+    color: #eea302;
+} */
+
+
+/* .font {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 900;
+}
+
+.txts {
+    text-align: left;
+}
+
+.h1 {
+    font-size: 6rem;
+    line-height: 1;
+}
+
+.h3 {
+    font-size: 1.25rem;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.main-align {
+    padding-left: 6px;
+}
+
+.main {
+    width: 80%;
+}
+
+.main-txt {
+    width: 38%;
+    margin-left: -50px;
+}
+
+.main-p {
+    font-family: 'Quicksand';
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.main-img {
+    width: 55%;
+}
+
+.btn {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 2.5rem;
+    border: 1px solid black;
+    height: 124px;
+    width: 124px;
+    text-align: center;
+
+}
+.btn1 {
+    background-color: #eea302;
+}
+.btn2 {
+    background: #ff3b25;
+}
+.btn3 {
+    background: #80d8da;
+}
+.hr {
+    margin-top: 3%;
+    background-color: #c1c1c1;
+    height: 2px;
+    display: block;
+    width: 94%; 
+    margin: 10% auto 2% auto;
+}
+#footer {
+    margin-bottom: 10%;
+    margin-top: 3%;
+}
+
+
+.nav-li a:hover {
+    color: #eea302;
+}
+.btn {
+    transition: 0.7s ease-in-out;
+}
+.btn:hover {
+    background: #f3f3f3;
+    transition: 0.5 ease-in-out;
+}
+
+*/

@@ -8,35 +8,54 @@
     <title>My Portfolio</title>
     <link rel="icon" type="icon.ico" href="/images/favicon.ico">
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Noto+Sans+JP:wght@400;500;700;900&family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Noto+Sans+JP:wght@100;400;500;700;900&family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
     <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/11a2305fbc.js" crossorigin="anonymous"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsiveIndex.css">
 
 </head>
 
 <body class="bg">
-    <nav class=" p-4 pt-8 flex justify-between items-center">
-        <div class="flex items-center ml-6">
-            <!-- <img class="h-6 mr-2 " src="images/android-chrome-192x192.png" alt=""> -->
-            <div class="yellow-circle mr-2"></div>
-            <span class="text-4xl font-semibold">B Sunny</span>
-            <span class="ml-2 text-sm mt-4">Programmer</span>
+
+    <nav class=" navigation">
+        <div class="navigation-container">
+            <div class="left-side-nav ">
+                <div class="yellow-circle"></div>
+                <span class="name noto-sans-font">B Sunny</span>
+                <span class="profession">Programmer</span>
+            </div>
+            <div class="ham-burger">
+                <span class="lines line1"></span>
+                <span class="lines line2"></span>
+                <span class="lines line3"></span>
+            </div>
         </div>
-        <ul class="flex justify-end mr-12">
-            <li class="mx-3 nav-li"><a class="nav-link1" href="about.html">About</a></li> <span class="">|</span>
-            <li class="mx-3 nav-li"><a class="nav-link2" href="projects.html">Projects</a></li><span class="">|</span>
-            <li class="mx-3 nav-li"><a class="nav-link3" href="contact.html">Contact</a></li>
-
-        </ul>
-
+        <div class="right-side-nav ">
+            <ul class="nav-ul ">
+                <li class="nav-li"><a class="nav-link1 noto-sans-font nav-links" href="html/about.html">About</a></li>
+                <span class="bars">|</span>
+                <li class="nav-li"><a class="nav-link2 noto-sans-font nav-links" href="html/projects.html">Projects</a></li>
+                <span class="bars">|</span>
+                <li class="nav-li"><a class="nav-link3 noto-sans-font nav-links" href="html/contact.html">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-    <section class="main mt-20 m-auto">
+
+
+    <script src="javascript/index.js"></script>
+</body>
+
+</html>
+
+
+
+<!-- <section class="main mt-20 m-auto">
         <div class="flex">
             <img class="main-img " src="images/headshot.png" alt="">
 
@@ -77,7 +96,4 @@
                 <p>Proudly created by Sunny.</p>
             </div>
         </footer>
-    </section>
-</body>
-
-</html>
+    </section> -->
