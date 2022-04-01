@@ -83,6 +83,34 @@
         width: 100%;
         justify-content: center;
     }
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: left;
+        gap: 1.5em;
+    }
+    .social-links {
+        justify-self: end;
+    }
+    .copyright {
+        margin-top: 10%;
+        text-align: center;
+        justify-self: center;
+        grid-column: span 3;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin: 14px 0;
+    }
+    .copyright {
+        margin-top: 10%;
+        text-align: center;
+    }
 }
 
 @media (max-width: 400px) {

@@ -91,9 +91,11 @@
     color: #eea302;
 }
 
-.bars {
+
+/* .bars {
     font-size: 1.3rem;
-}
+    color: #403939;
+} */
 
 .ham-burger {
     display: none;
@@ -175,6 +177,7 @@
 .main-text {
     font-size: 0.9rem;
     margin: left 2px;
+    color: #625e57;
 }
 
 .btn {
@@ -218,6 +221,16 @@
 
 
 /* Footer */
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 4% 7% 4%;
+}
+
+.profile-links:hover {
+    color: #eea302;
+}
 
 
 /*
