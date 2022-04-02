@@ -48,8 +48,8 @@
         font-size: 0.8rem;
     }
     .btn {
-        height: 90px;
-        width: 90px;
+        height: 100px;
+        width: 100px;
         font-size: 1rem;
     }
 }
@@ -120,8 +120,8 @@
         margin: auto;
     }
     .btn {
-        height: 82px;
-        width: 82px;
+        height: 90px;
+        width: 90px;
         font-size: 1rem;
     }
 }
@@ -154,5 +154,9 @@
     }
     .right-side-nav {
         width: 245px;
+    }
+    .btn {
+        height: 82px;
+        width: 82px;
     }
 }
