@@ -61,7 +61,10 @@
     margin: 5% 2px 0 2px;
     color: #403939;
 }
-
+.active-logo{
+    display: flex;
+    align-items: center;
+}
 
 /* right side of the navigation bar */
 
@@ -233,7 +236,6 @@
 .profile-links:hover {
     color: #eea302;
 }
-
 
 /*
 
