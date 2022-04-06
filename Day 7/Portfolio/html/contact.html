@@ -18,9 +18,9 @@
     <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/11a2305fbc.js" crossorigin="anonymous"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/responsiveIndex.css" />
-    <link rel="stylesheet" href="/css/contact.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsiveIndex.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
 </head>
 
 <body class="bg">
@@ -61,20 +61,57 @@
             <div class="contact-main-left">
                 <div class="contact-main-heading">
                     <h1>Contact</h1>
-                    <h4>Looking forward for hearing from you.</h4>
-                </div>
-                <div class="contact-main-heading">
-                    <h2>Contact</h2>
                     <p>Looking forward for hearing from you.</p>
                 </div>
-                <div class="contact-main-heading">
-                    <h2>Contact</h2>
-                    <p>Looking forward for hearing from you.</p>
-                </div>             
+                <div class="contact-main-info">
+                    <div class="contact-main-details">
+                        <h2>Phone</h2>
+                        <p>+91 7973699425</p>
+                    </div>
+                    <div class="contact-main-details">
+                        <h2>Email</h2>
+                        <p>sunny6464n@gmail.com</p>
+                    </div>
+                </div>
             </div>
             <div class="contact-main-right">
-                <input type="text" placeholder="enter name">
-                <button type="button">Btn</button>
+                <form class="contact-form" action="">
+                    <div class="contact-main-rows">
+                        <div class="form-item flex-col">
+                            <label for="form-first-name">First Name</label>
+                            <input type="text" name="form-first-name" id="form-first-name"
+                                placeholder="">
+                        </div>
+                        <div class="form-item flex-col">
+                            <label for="form-last-name">Last Name</label>
+                            <input type="text" name="form-last-name" id="form-last-name"
+                                placeholder="">
+                        </div>
+
+                    </div>
+
+                    <div class="contact-main-rows">
+                        <div class="form-item flex-col">
+                            <label for="form-email">Email</label>
+                            <input type="email" name="form-email" id="form-email" placeholder="">
+                        </div>
+                        <div class="form-item flex-col">
+                            <label for="form-subject">Subject</label>
+                            <input type="text" name="form-subject" id="form-subject" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="contact-main-rows">
+                        <div class="form-item flex-col">
+                            <label for="form-message">Message</label>
+                            <textarea name="form-message" id="form-message" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="form-item flex-col">
+                            <button class=" btn btn1">About</button>
+                        </div>
+                    </div>
+
+                </form>
             </div>
         </div>
     </section>
