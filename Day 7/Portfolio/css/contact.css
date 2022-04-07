@@ -120,4 +120,8 @@
    #form-message-txt{
       width: 65%;
   }
+  .message-adjustment{
+   align-items: flex-start;
+   margin-left: 12%;
+  }
 }
