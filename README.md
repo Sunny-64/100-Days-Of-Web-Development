@@ -19,4 +19,13 @@
    <li>
     <p><strong> Day 6 ---> Made Simon Game.</strong> </p>
   </li>
+  <li>
+    <p><strong> Day 7 ---> Made Portfolio.</strong> </p>
+  </li>
+    <li>
+    <p><strong> Day 8 ---> Made Analog Clock.</strong> </p>
+  </li>
+    <li>
+    <p><strong> Day 9 ---> Made Rock Paper Scissors game.</strong> </p>
+  </li>
 </ul>
