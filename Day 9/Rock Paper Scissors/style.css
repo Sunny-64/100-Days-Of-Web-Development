@@ -1,0 +1,109 @@
+*{
+    margin:0; 
+    padding: 0;
+    box-sizing: border-box;
+    color : #fff; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --body-bg : #1e1e1e; 
+    --secondary-color : #FF443A; 
+}
+
+
+body{
+    background: var(--body-bg);
+}
+
+h1{
+    font-size: 4rem;
+}
+
+/* container */
+.container{
+    padding: 3%;
+}
+
+/* header */
+.you{
+    color: var(--secondary-color);
+}
+.header{
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+}
+
+/* players section */
+.players{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+}
+
+/* Main Section */
+.player1,.player2{
+    text-align: center;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 2px;
+}
+.main{
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+
+}
+
+.main-mid{
+    justify-self: center;
+    align-self: center;
+}
+.main-left{
+
+    justify-self: center;
+    align-self: center;
+}
+.main-right{
+
+    justify-self: center;
+    align-self: center;
+}
+
+.img{
+    max-width: 400px;
+}
+/* bottom */
+.buttons{
+    margin-top: 3%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+.btn{
+    background: var(--secondary-color);
+    width: 200px;
+    height: 77px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 60px;
+}
+
+.btn:hover{
+    cursor:pointer; 
+}
+
+.result-div{
+    display: none;
+}
+
+
+/* footer */
+.footer{
+    margin-top: 4%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utils.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <section class="players">
+        <div class="player1">
+          <h1 class="you">YOU</h1>
+        </div>
+        <div class="result">
+          <h1 class="winner"></h1>
+        </div>
+        <div class="player2">
+          <h1 class="comp">COMP</h1>
+        </div>
+      </section>
+      <main class="main">
+        <div class="main-left">
+          <img class="img userImg" src="images/rock.png" alt="" />
+        </div>
+        <div class="main-mid">
+          <h2>VS</h2>
+        </div>
+
+        <div class="main-right">
+          <img
+            class="img compImg"
+            src="images/flipped images/paper.png"
+            alt=""
+          />
+        </div>
+      </main>
+
+      <div class="buttons">
+        <div class="btn-div rock-div">
+          <button class="btn rock">ROCK</button>
+        </div>
+        <div class="btn-div paper-div">
+          <button class="btn paper">PAPER</button>
+        </div>
+        <div class="btn-div result-div">
+          <button class="btn play-again"></button>
+        </div>
+        <div class="btn-div scissor-div">
+          <button class="btn scissor">SCISSOR</button>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>copyright &copy; All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
