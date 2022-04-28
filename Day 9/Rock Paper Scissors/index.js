@@ -6,6 +6,7 @@ for(let i = 0; i<document.querySelectorAll(".btn").length; i++){
         var buttonClicked = i + 1; 
         console.log(buttonClicked); 
         winner(buttonClicked , compNum); 
+        displayImages(buttonClicked, compNum); 
     });
 }
 
@@ -69,5 +70,30 @@ function showResult(whoWon){
 }
 
 function displayImages(userImgNo, compImgNo){
-    
+    // for user images..
+    let userImg = "images/";
+
+    if(userImgNo == 1){
+        document.querySelector(".userImg").src = userImg + "rock.png"; 
+    }
+    if(userImgNo == 2){
+        document.querySelector(".userImg").src = userImg + "paper.png"; 
+    }
+    if(userImgNo == 3){
+        document.querySelector(".userImg").src = userImg + "scissors.png"; 
+    }
+
+
+    // for computer images.. 
+    let compImg = "images/flipped images/"; 
+
+    if(compImgNo == 1){
+        document.querySelector(".compImg").src = compImg + "rock.png"; 
+    }
+    if(compImgNo == 2){
+        document.querySelector(".compImg").src = compImg + "paper.png"; 
+    }
+    if(compImgNo == 3){
+        document.querySelector(".compImg").src = compImg + "scissors.png"; 
+    }
 }
