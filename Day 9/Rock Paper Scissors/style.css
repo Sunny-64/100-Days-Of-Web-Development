@@ -23,6 +23,7 @@ h1{
 /* container */
 .container{
     padding: 3%;
+    min-width: 500px;
 }
 
 /* header */
@@ -107,3 +108,15 @@ h1{
     justify-items: center;
 }
 
+/* media querries... */
+
+@media (max-width : 900px) {
+    .img{
+        max-width: 220px;
+    }
+  
+    .btn {
+        width: 130px;
+        height: 60px;
+    }
+}
