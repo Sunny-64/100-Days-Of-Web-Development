@@ -60,12 +60,23 @@ function showResult(whoWon){
         winner.style.color = "#FF443A"; 
         winner.innerHTML = "YOU WON !!";         
         document.querySelector(".play-again").innerHTML = "PLAY AGAIN";    
+        highlightWinner("comp");
     }
     else if(whoWon == 3){
        let winner = document.querySelector(".winner"); 
         winner.style.color = "#FF443A"; 
         winner.innerHTML = "COMP WON !!";   
-        document.querySelector(".play-again").innerHTML = "TRY AGAIN";    
+        document.querySelector(".play-again").innerHTML = "TRY AGAIN";   
+        highlightWinner("user");  
+    }
+}
+// makes the winner stand out more.
+function highlightWinner(Loser){
+    if(Loser == "user"){
+        document.querySelector(".userImg").classList.add("showLoser");
+    }
+    else{
+        document.querySelector(".compImg").classList.add("showLoser");
     }
 }
 
@@ -97,3 +108,4 @@ function displayImages(userImgNo, compImgNo){
         document.querySelector(".compImg").src = compImg + "scissors.png"; 
     }
 }
+
