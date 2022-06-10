@@ -1,8 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     padding: 0;
+    min-width: 260px;
 }
 
 .top-container {
@@ -42,16 +47,22 @@ h2 {
     text-decoration: underline;
 }
 
+.mountain-img {
+    width: 100%;
+}
+
 .cloud-1 {
     position: absolute;
-    right: 343px;
+    /* right: 343px; */
+    right: 5%;
     top: 20px;
 }
 
 .cloud-2 {
     position: absolute;
     top: 200px;
-    left: 300px;
+    /* left: 300px; */
+    left: 6%;
 }
 
 .profile img {
