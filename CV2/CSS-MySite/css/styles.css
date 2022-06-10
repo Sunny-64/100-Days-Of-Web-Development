@@ -48,7 +48,7 @@ h2 {
 }
 
 .mountain-img {
-    width: 100%;
+    width: 45%;
 }
 
 .cloud-1 {
@@ -168,4 +168,11 @@ footer p {
 .profile-txt {
     display: inline-block;
     width: 50%;
+}
+
+
+@media (max-width : 500px) {
+    .mountain-img {
+        width: 100%;
+    }
 }
