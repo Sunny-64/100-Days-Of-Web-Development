@@ -1,5 +1,7 @@
 /* Global classes */
-
+body{
+    min-width: 320px; 
+}
 .noto-sans-font {
     font-family: 'Noto Sans Jp';
 }

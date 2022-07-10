@@ -98,6 +98,9 @@
         justify-self: center;
         grid-column: span 3;
     }
+    .btn-spacing{
+        margin: 2% 8px 0 8px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -147,14 +150,17 @@
     }
     .ham-burger {
         margin-top: 2px;
+        position: relative;
+        right: 3%;
     }
+    .btn-spacing{
+        margin: 2% 4px 0 4px;
+    }
+  
 }
 
 @media (max-width: 265px) {
-    .ham-burger {
-        position: fixed;
-        right: 2%;
-    }
+    
     .right-side-nav {
         width: 245px;
     }
