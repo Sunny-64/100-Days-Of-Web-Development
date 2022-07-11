@@ -1,0 +1,19 @@
+<%- include('partials/header') -%>
+<section id="journal-content">
+    <% let pageFound = false; %>
+    <% for(let i = 0; i<journalsData.length; i++){ %>
+           <% if(journalsData[i].title == titlePassed){ %>
+                <h1 class="main-date"> <%= journalsData[i].date %> </h1>
+                <h2 class="main-title"> <%= journalsData[i].title %> </h2>
+                <p class="main-content"> <%= journalsData[i].content %> </p>
+                <% pageFound = true; %> 
+           <% } %>
+    <% } %>
+        <% if(pageFound == false){ %>
+            <h1>404 : Page not Found</h1>
+        <% } %>
+</section>
+
+<%- include('partials/footer') -%>
+
+

@@ -1,0 +1,24 @@
+<%- include('partials/header') -%>
+<section id="main">
+    <div class="journal">
+        <% for(let i = 0; i<diary.length; i++){ %>
+            <div class="one-journal">
+                <h1 class="main-date"> <%= diary[i].date %> </h1>
+                <h2 class="main-title"> <%= diary[i].title %> </h2>
+                
+                <% if(diary[i].content.length > 150){ %>
+                    <div class="main-lg-content">
+                        <p class="main-content"> <%= diary[i].content.substring(0,150) + "..." %> </p>
+                        <a class="main-content read-more" href="/search/<%= diary[i].title %> ">Read more</a>
+                    </div>
+                <% } else{  %>
+                    <div class="main-lg-content">
+                        <p class="main-content"> <%= diary[i].content %> </p>
+                        <a href="/search/<%= diary[i].title %>" class="main-lg-content read-more">Open</a>
+                    </div>
+                <% } %>     
+            </div>
+        <% } %>     
+    </div>
+</section>
+<%- include('partials/footer') -%>
