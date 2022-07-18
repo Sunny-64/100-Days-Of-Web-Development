@@ -1,17 +1,27 @@
 <%- include('partials/header') -%>
 <section id="journal-content">
-    <% let pageFound = false; %>
-    <% for(let i = 0; i<journalsData.length; i++){ %>
-           <% if(journalsData[i].title == titlePassed){ %>
-                <h1 class="main-date"> <%= journalsData[i].date %> </h1>
-                <h2 class="main-title"> <%= journalsData[i].title %> </h2>
-                <p class="main-content"> <%= journalsData[i].content %> </p>
-                <% pageFound = true; %> 
-           <% } %>
-    <% } %>
-        <% if(pageFound == false){ %>
-            <h1>404 : Page not Found</h1>
-        <% } %>
+  <div class="journal-container">
+        <div class="journal-card">
+            <% let pageFound = false; %>
+            <% for(let i = 0; i<journalsData.length; i++){ %>
+                <% if(journalsData[i].title == titlePassed){ %>
+                 
+                    <div class="display-journal-date-on-card">
+                        <h1 class="journal-main-date"> <%= journalsData[i].date %> </h1>
+                    </div>
+                    <!-- <h2 class="main-title"> <%= journalsData[i].title %> </h2> -->
+                    <div class="display-journal-content-on-card">
+                        <p class="journal-main-content"> <%= journalsData[i].content %> </p>
+                    </div>
+       
+                  <% pageFound = true; %> 
+                <% } %>
+            <% } %>
+            <% if(pageFound == false){ %>
+                <h1>404 : Page not Found</h1>
+            <% } %>
+        </div>
+  </div>
 </section>
 
 <%- include('partials/footer') -%>
