@@ -25,27 +25,27 @@ const journalSchema = new mongoose.Schema({
 const Journal = mongoose.model("Journal", journalSchema); 
 
 // test datas 
-const dummyTxt = "Lorem ipsum dolor sit amet. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
-const test1 = {
-    date : currentDate + ", " + weekday,
-    title : "Test Title 1",
-    content : dummyTxt
-}
-const test2 = {
-    date : currentDate + ", " + weekday,
-    title : "Test Title 2", 
-    content : dummyTxt
-}
+// const dummyTxt = "Lorem ipsum dolor sit amet. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
-const test3 = {
-    date : currentDate + ", " + weekday,
-    title : "Test Title 3", 
-    content : dummyTxt
-}
+// const test1 = {
+//     date : currentDate + ", " + weekday,
+//     title : "Test Title 1",
+//     content : dummyTxt
+// }
+// const test2 = {
+//     date : currentDate + ", " + weekday,
+//     title : "Test Title 2", 
+//     content : dummyTxt
+// }
 
-const testDataArray = [test1, test2, test3]; 
+// const test3 = {
+//     date : currentDate + ", " + weekday,
+//     title : "Test Title 3", 
+//     content : dummyTxt
+// }
 
+// const testDataArray = [test1, test2, test3]; 
 
 
 // get requests
@@ -67,7 +67,8 @@ app.get("/", (req, res) =>{
     }); 
 });
 app.get("/write", (req, res) =>{
-    res.render('write'); 
+    const todaysDate = currentDate + ", " + weekday; 
+    res.render('write', {todaysDate : todaysDate}); 
 });
 app.get("/edit", (req, res) =>{
     res.render('edit'); 
@@ -76,9 +77,32 @@ app.get("/edit", (req, res) =>{
 app.get("/search", (req, res) =>{
     res.render('search'); 
 });
-app.get("/search/:title", (req, res) =>{
-    const titlePassed = req.params.title; 
-    // res.render('journal', {journalsData : journals , titlePassed : titlePassed});
+
+app.get("/search/:date", (req, res)=>{
+    const datePassed = req.params.date; 
+    console.log(datePassed);
+    Journal.find({}, (err, data)=>{
+        if(err){
+            console.log("There's an Error"); 
+        }
+        else{
+            console.log("Result Found"); 
+            res.render('journal', {journalsData : data, datePassed : datePassed}); 
+        }
+    });
+}); 
+
+app.get("/delete/:date", (req, res)=>{
+    const datePassed = req.params.date; 
+
+    Journal.deleteOne({date : datePassed}, (err)=>{
+        if(err){
+            console.log("Couldn't Delete Something Went Wrong"); 
+        }else{
+            console.log("Successfully Deleted"); 
+            res.redirect("/"); 
+        }
+    }); 
 });
 
 // post requests
@@ -86,14 +110,8 @@ app.post("/write", (req, res) =>{
     const completeDate = currentDate + ", " + weekday;
     const journal = {
          date : completeDate,
-         title : req.body.title,
-         content : req.body.journal
+         content : req.body.writeJournalContent
     };
-    if(journal.title == ""){
-        journal.title = "untitled"
-    }
-    // journals.push(journal); 
-    // db.journalDatabase(journal); 
     const item = new Journal(journal); 
     item.save(); 
     res.redirect("/"); 
@@ -102,6 +120,7 @@ app.post("/write", (req, res) =>{
 app.listen(3000, ()=>{
     console.log("Server is Running at Port 3000"); 
 });
+
 
 // Database (gotta shift it to other file later...)
 // declaring the schema globaly due to overwrite issues.

@@ -4,19 +4,18 @@
         <% for(let i = 0; i<diary.length; i++){ %>
             <div class="one-journal">
                 <h1 class="main-date"> <%= diary[i].date %> </h1>
-                <h2 class="main-title"> <%= diary[i].title %> </h2>
                 
                 <% if(diary[i].content.length > 150){ %>
                     <div class="main-lg-content">
                         <p class="main-content"> <%= diary[i].content.substring(0,150) + "..." %> 
-                            <a class="main-content read-more" href="/search/<%= diary[i].title %> ">read more</a>
+                            <a class="main-content read-more" href="/search/<%= diary[i].date %> ">read more</a>
                         </p>
                         
                     </div>
                 <% } else{  %>
                     <div class="main-lg-content">
                         <p class="main-content"> <%= diary[i].content %> 
-                            <a class="main-content read-more" href="/search/<%= diary[i].title %> ">...open</a>
+                            <a class="main-content read-more" href="/search/<%= diary[i].date %> ">...open</a>
                         </p>
                     </div>
                 <% } %>     

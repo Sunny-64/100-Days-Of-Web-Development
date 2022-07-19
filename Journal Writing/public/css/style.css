@@ -91,66 +91,53 @@ li{
     display: inline;
 }
 
-/* Write page css */
-.write-container{
+
+
+/* New Journal Write Page */
+
+.write-journal-heading{
+    background: #8888881c;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+}
+
+.write-journal-date{
+    font-size: 2rem;  
+}
+
+.write-journal-content-input{
     padding: 3%;
 }
-.write-card{
-     padding: 2%;
-     /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);  */
-}
-.write-heading{
-    text-align: center;
-    margin-bottom: 30px;
-}
 
-.write-form{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-.write-form-item{
-    display: flex;
-    margin : 20px 0; 
-    justify-content: center;
-
-}
-
-.write-form-title, .write-form-journal{
-    font-size: 1.2rem;
-}
-#write-title-input{
-    width: 60%;
-    height: 35px;
-    margin-left: 34px;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid black;
-}
-
-#write-title-input:focus{
-    border-bottom: 2px solid rgb(105, 179, 208);
-    font-size: 1rem;
-}
-#write-journal-input{
+#write-journal-content{
     resize: none;
-    width: 60%;
-    height: 300px;
-    margin-left: 15px;
-    font-size: 1rem;
-    padding: 2%;
+    width: 100%;
+    height: 150px;
+    border : none; 
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
-#write-journal-input:focus{
+
+#write-journal-content:focus{
     border: none;
-    outline: 2px solid rgb(105, 179, 208);
+    outline: none;
 }
-/* #write-journal-input::placeholder, #write-title-input::placeholder{
-    padding-left: 2%;
+
+/* .save-btn{
+    border: none;
+    position: absolute;
+    right: 30px;
 } */
-/* #write-journal-input::placeholder{
-    padding-top: 2%;
-} */
+
+.write-journal-btn{
+    display: flex;
+    justify-content: center;
+}
 .write-submit-btn{
+    margin-top: 30px;
     width: 130px;
     height: 60px;
     cursor: pointer;
@@ -161,14 +148,12 @@ li{
     border: 1px solid #888888;
     border-radius: 4%;
 }
-
 .write-submit-btn:hover{
     border: none;
     box-shadow: 0 4px 8px 0 rgba(106, 151, 167, 0.2), 0 6px 20px 0 rgba(106, 151, 167, 0.19);
     outline: 2px solid rgb(105, 179, 208);
 
-}
-
+} 
 /* Journal */
 .journal-container{
     padding: 6%;
@@ -197,3 +182,34 @@ li{
     font-size: 1.2rem;
     line-height: 1.5;
 }
+
+.card-heading{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.journal-options, .journal-edit{
+    display: flex;
+    align-items: center;
+}
+.journal-options{
+    /* justify-content: space-between; */
+    /* justify-self: flex-end; */
+    position: absolute;
+    right: 30px;
+}
+.img{
+    width: 28px;
+    opacity: 0.7;
+}
+.journal-options-btn{
+    outline: none;
+    border: none;
+    margin: 0 18px;
+    cursor: pointer;
+}
+.img:hover{
+    opacity: 1;
+}
+
+

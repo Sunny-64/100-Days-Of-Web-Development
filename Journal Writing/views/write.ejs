@@ -1,20 +1,50 @@
 <%- include('partials/header') -%>
-    <div class="write-container">
-        <div class="write-card">
-            <h1 class="write-heading">Write your daily Journals..</h1>
-            <form class="write-form" action="/write" method="post">
-                <div class="write-form-item">
-                    <label for="title" class="write-form-title">Title</label>
-                    <input type="text" name="title" id="write-title-input" placeholder="Enter the title of your journal.">
+
+    <section id="write-journal">
+        <div class="journal-container">
+            <form action="/write" method="post">
+            <div class="journal-card">
+                <div class="write-journal-heading">
+                    <h1 class="write-journal-date"><%= todaysDate %> </h1>
                 </div>
-                <div class="write-form-item">
-                    <label class="write-form-journal" for="journal">Journal</label> <br>
-                    <textarea name="journal" id="write-journal-input" placeholder="Write your Journal here.." spellcheck="false"></textarea>
-                </div>
-                <div class="write-form-item">
-                    <button class="write-submit-btn" type="submit">Add Journal</button>
-                </div>
-            </form>
+                
+                    <!-- <button type="submit" class="save-btn"><img class="img " src="/images/save-icon.png" alt="save"></button> -->
+                    <div class="write-journal-content-input">
+                        <textarea name="writeJournalContent" id="write-journal-content" placeholder="Write your journal Here."></textarea>
+                    </div>
+                    
+            </div>
+            <div class="write-journal-btn">
+                <button type="submit" class="write-submit-btn">Add Journal</button>
+            </div>
+        </form>
         </div>
-    </div>
-    <%- include('partials/footer') -%>
+    </section>
+
+<%- include('partials/footer') -%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,16 +4,26 @@
         <div class="journal-card">
             <% let pageFound = false; %>
             <% for(let i = 0; i<journalsData.length; i++){ %>
-                <% if(journalsData[i].title == titlePassed){ %>
+                <% if(journalsData[i].date == datePassed){ %>
                  
-                    <div class="display-journal-date-on-card">
+                    <div class="display-journal-date-on-card card-heading">
                         <h1 class="journal-main-date"> <%= journalsData[i].date %> </h1>
+                        <div class="journal-options">
+                          
+                            <a href="" class="journal-options-btn">
+                                <img src="/images/edit-icon.png" class="edit-icon img" alt="edit-icon">
+                                
+                            </a>
+                           
+                            <a href="/delete/<%= journalsData[i].date %>" class="journal-options-btn">
+                                <img src="/images/delete-icon.png" class="delete-icon img" alt="delete-icon">
+                                
+                            </a>
+                        </div>
                     </div>
-                    <!-- <h2 class="main-title"> <%= journalsData[i].title %> </h2> -->
                     <div class="display-journal-content-on-card">
-                        <p class="journal-main-content"> <%= journalsData[i].content %> </p>
+                        <pre class="journal-main-content"> <%= journalsData[i].content %> </pre>
                     </div>
-       
                   <% pageFound = true; %> 
                 <% } %>
             <% } %>
@@ -27,3 +37,6 @@
 <%- include('partials/footer') -%>
 
 
+<!-- problem 1 : rendering the data in journal page. -->
+<!-- problem 2 : adding a edit button on the journal page. -->
+<!-- problem 3 : limiting the daily records. -->
