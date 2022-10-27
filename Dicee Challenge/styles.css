@@ -40,6 +40,30 @@ img {
     width: 80%;
 }
 
+.restart-btn-containner{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.restart{
+     /* height: 50px; */
+    /*width: 100px; */
+    background-color:#4ECCA3 ;
+    border: none;
+    font-family: 'Lobster', cursive;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    font-size: 1.4rem;
+    border-radius: 7px;
+    padding: 1%;
+    cursor: pointer;
+}
+
+.restart:hover{
+    box-shadow: -1px 2px 8px 0px;
+}
+
 footer {
     margin-top: 5%;
     color: #EEEEEE;
