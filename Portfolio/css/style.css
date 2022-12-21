@@ -159,17 +159,27 @@ body{
 .main-img{
    justify-self: end;
    margin-right: 10%;
-   background-color: #000;
-   width: 400px;
-   height: 400px;
+   /* background-color: #000; */
+   /* border : 1px solid black;  */
+   width: 450px;
+   height: 450px;
+
    border-radius: 50%;
 }
 
 .main-img img{
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
+
+    
     border-radius: 50%;
-    object-fit: contain;
+    object-fit: cover;
+    filter: grayscale(100);
+    transition: 700ms ease-in-out;
+}
+
+.main-img img:hover{
+    filter: grayscale(0);
 }
 
 /* main section right side */
