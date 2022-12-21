@@ -87,10 +87,10 @@ function displayImages(userImgNo, compImgNo){
     if(userImgNo == 1){
         document.querySelector(".userImg").src = userImg + "rock.png"; 
     }
-    if(userImgNo == 2){
+    else if(userImgNo == 2){
         document.querySelector(".userImg").src = userImg + "paper.png"; 
     }
-    if(userImgNo == 3){
+    else if(userImgNo == 3){
         document.querySelector(".userImg").src = userImg + "scissors.png"; 
     }
 

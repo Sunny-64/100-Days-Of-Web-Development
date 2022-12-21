@@ -15,7 +15,7 @@ const weekday = date.getWeekday();
 
 // Database 
 
-mongoose.connect('mongodb://localhost:27017/journalDB');
+mongoose.connect('mongodb://0.0.0.0:27017/journalDB');
 const journalSchema = new mongoose.Schema({
     date : String, 
     title : String, 
