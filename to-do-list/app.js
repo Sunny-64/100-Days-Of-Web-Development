@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require("body-parser");
 const date = require(__dirname + "/date.js");
-import {app} from './firebaseConfig'; 
+
 
 const app = express();
 
@@ -16,7 +16,6 @@ const items = [];
 
 app.get('/', function (req, res) {
     const day = date.getDate();
-    console.log(day);
     res.render("index", { day: day, items: items });
 });
 app.post("/", function (req, res) {

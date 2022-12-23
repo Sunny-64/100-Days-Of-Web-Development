@@ -4,6 +4,7 @@
   "description": "a to do list project using localstorage i guess",
   "main": "app.js",
   "scripts": {
+    "start" : "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "sunny",

@@ -1,4 +1,3 @@
-console.log(module);
 module.exports.getDate = function () {
     const today = new Date();
     const options = {
