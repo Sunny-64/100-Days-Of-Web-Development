@@ -1,3 +1,9 @@
+setTimeout(()=>{
+    let loader = document.querySelector(".pre-loader");
+    loader.style.display = "none";
+},1000)
+
+
 setInterval(() => {
 
     let date = new Date(); 
@@ -14,3 +20,8 @@ setInterval(() => {
     minutes.style.transform = `rotate(${mrotations}deg)`; 
     seconds.style.transform = `rotate(${srotations}deg)`; 
 }, 1000);
+
+// window.addEventListener("load", ()=>{
+//     let loader = document.querySelector(".pre-loader");
+//     loader.style.display = "none"; 
+// })
