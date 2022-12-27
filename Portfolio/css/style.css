@@ -247,14 +247,20 @@ body{
 }
 
 .hr {
-    margin-top: 3%;
+    /* margin-top: 3%; */
     background-color: #c1c1c1;
     height: 2px;
     display: block;
     width: 94%;
-    margin: 10% auto 2% auto;
+    /* margin: 10% auto 2% auto; */
+    margin: 0 auto;
 }
 
+.footer-hr{
+    margin-top: 3%;
+    margin: 10% auto 2% auto;
+
+}
 
 /* Footer */
 
@@ -274,18 +280,3 @@ body{
     }
 }
 
-/*
-
-/* .font {
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 900;
-
-
-
-#footer {
-    margin-bottom: 10%;
-    margin-top: 3%;
-}
-
-
-*/
