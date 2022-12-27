@@ -7,7 +7,7 @@ app.get("/", function (req, res) {
     const userAgent = req.get('user-agent');
     const options = {
         host: 'newsapi.org',
-        path: '/v2/top-headlines?country=in&apiKey=0ade211d8e654cbabaa485d654022047',
+        path: '/v2/top-headlines?country=in&apiKey=',
         headers: {
             'User-Agent': userAgent
         }
