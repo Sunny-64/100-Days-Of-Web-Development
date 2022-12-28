@@ -2,6 +2,7 @@ body{
     /* background: #78938acf; */
     /* background: rgba(30, 27, 27, 0.893);*/
     background : rgb(3 2 2 / 89%); 
+    min-width: 557px;
 }
 *{
     margin: 0;
