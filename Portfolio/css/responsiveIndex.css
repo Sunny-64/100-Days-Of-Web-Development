@@ -44,14 +44,18 @@
         background: #f3f3f3;
         transition: 0.7s ease-in-out;
         position: absolute;
+        left : 0;
         top: -300%;
+        z-index: 99999;
     }
     .ham-burger {
-        z-index: 2;
+        z-index: 999999;
         display: block;
     }
     .active {
+        left: 0;
         top: 0;
+        width: 100%;
     }
     .bars {
         display: none;
@@ -145,6 +149,9 @@
 }
 
 @media (max-width: 350px) {
+    .right-side-nav{
+        width: 100%;
+    }
     .navigation {
         min-width: 245px;
     }
@@ -171,11 +178,15 @@
   
 }
 
-@media (max-width: 265px) {
-    
+@media (max-width : 320px) {
     .right-side-nav {
-        width: 245px;
+        min-width: 320px;
+        /* width: 100%; */
     }
+}
+
+@media (max-width: 265px) {
+
     .btn {
         height: 82px;
         width: 82px;

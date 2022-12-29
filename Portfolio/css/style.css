@@ -67,6 +67,7 @@ body{
     color: #403939;
 }
 .active-logo{
+    z-index: 999999;
     display: flex;
     align-items: center;
 }
