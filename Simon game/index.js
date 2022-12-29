@@ -17,7 +17,7 @@ $(".btn").on("click", function() {
 
 var start = false;
 var level = 0;
-$(document).keypress(function(e) {
+$("#start").on("click", function(e) {
     if (!start) {
         $("#level-title").text("level " + level);
         nextSequence();
