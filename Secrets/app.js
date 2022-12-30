@@ -9,7 +9,6 @@ const flash = require("express-flash");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const findOrCreate = require('mongoose-findorcreate')
 
-
 const app = express();
 app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
@@ -51,30 +50,15 @@ const secretsModel = new mongoose.Schema({
   userId : {type : mongoose.Schema.Types.ObjectId}
 })
 
-
 userModal.plugin(passportLocalMongoose);
 userModal.plugin(findOrCreate);
-
 
 // user model
 const User = new mongoose.model("User", userModal);
 // secretsModal
 const Secret = new mongoose.model("Secret", secretsModel);
-// use static authenticate method of model in LocalStrategy
-// passport.use(new LocalStrategy(User.authenticate()));
+
 passport.use(User.createStrategy());
-
-// use static serialize and deserialize of model for passport session support
-// passport.serializeUser(User.serializeUser());
-// passport.deserializeUser(User.deserializeUser());
-
-// passport.serializeUser((User, done) => {
-//   done(null, User.username);
-// });
-// passport.deserializeUser((User, done) => {
-//   done(null, User.username);
-// });
-
 
 passport.serializeUser(function(user, cb) {
   process.nextTick(function() {
@@ -96,8 +80,6 @@ passport.use(
       callbackURL: "http://localhost:3000/auth/google/secrets",
     },
     function (accessToken, refreshToken, profile, cb) {
-      // console.log(profile)
-      // User.findOrCreate({ googleId: profile.id }, function (err, user) {
       User.findOrCreate({ username: profile.displayName, googleId: profile.id }, function (err, user) {
         return cb(err, user);
       });
@@ -106,7 +88,6 @@ passport.use(
 
 // Routes
 app.get("/", (req, res) => {
-  // console.log(process.env.API_KEY);
   res.render("home");
 });
 
@@ -117,7 +98,6 @@ app.get('/auth/google',
 app.get('/auth/google/secrets', 
   passport.authenticate('google', { failureRedirect: '/login' }),
   function(req, res) {
-    // Successful authentication, redirect secrets.
     res.redirect('/secrets');
 });
 
@@ -138,20 +118,16 @@ app.get("/submit", (req, res)=>{
 })
 
 app.get("/secrets", (req, res) => {
-  // if (req.isAuthenticated()) {
-  //   Secret.find({}).then(data=>{console.log(data)}).catch(err => console.log(err));
-    
-  //   res.render("secrets");
-  // } else {
-  //   res.redirect("/login");
-  // }
+  if (req.isAuthenticated()) {
     Secret.find({})
     .then(data=>res.render("secrets", {secrets : data}))
     .catch(err => {
       console.log(err) 
       res.redirect("/");
     });
-
+  } else {
+    res.redirect("/login");
+  }
 });
 
 app.post("/register", (req, res) => {
@@ -173,8 +149,6 @@ app.post("/register", (req, res) => {
 
 
 app.post("/submit", (req, res)=>{
-  // console.log(req.user.userId);
-  
   const newSecret = new Secret({
     secret : req.body.secret, 
     userId : req.user.userId
@@ -200,11 +174,9 @@ app.post("/login", (req, res) => {
 
   req.login(user, (err) => {
     if (err) {
-      console.log(err);
-      // res.redirect("register");
+      res.redirect("register");
     } else {
       passport.authenticate("local")(req, res, () => {
-        // console.log("logged in");
         res.redirect("/secrets");
       });
     }
@@ -223,5 +195,37 @@ app.get("/logout", (req, res) => {
 
 app.listen(3000, function () {
   console.log("Server running at PORT : 3000");
-  // console.log("visit http://localhost:3000");
 });
+
+
+// SUPER SECRET ROUTE
+
+app.get("/password", (req,res)=>{
+  if (req.isAuthenticated()) {
+    res.render("password");
+  }
+  else{
+    res.redirect("login");
+  }
+});
+
+
+
+app.post("/password", (req, res)=>{
+  if(process.env.SUPER_SECRET_PASSWORD === req.body.superPassword){
+    req.session.authorizedUser = true;
+    res.render("superSecret", {content : process.env.SUPER_SECRET_MESSAGE});
+  }
+  else{
+    res.redirect("/password");
+  }
+})
+
+// app.get("/superSecret", (req,res)=>{
+//   if(req.session.authorizedUser){
+//     res.render("superSecret");
+//   }
+//   else{
+//     res.redirect("/password");
+//   }
+// })
