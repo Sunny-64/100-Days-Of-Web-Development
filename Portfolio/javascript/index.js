@@ -5,19 +5,9 @@ burger.addEventListener("click", function () {
     burger.classList.toggle('ham-open')
 });
 
-// Contact page button
-
-// document.getElementById("contact-btn").addEventListener("click", function () {
-//     location.href = "https://sunny-64.github.io/100-Days-Of-Web-Development/Day%207/Portfolio/html/contact.html";
-// }); 
 
 let cards = document.querySelectorAll(".card");
 let viewProjects = document.querySelectorAll(".view-project"); 
-
-// cards.addEventListener("mouseover",()=>{
-//     document.querySelector(".view-project").style.opacity = "1"; 
-//     document.querySelector(".view-project").style.transform = "scale(1)"; 
-// })
 
 cards.forEach((card, index) =>{
     card.addEventListener("mouseover", ()=>{      
