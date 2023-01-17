@@ -56,12 +56,13 @@
 }
 .contact-main-rows{
    display: flex;
- align-items: center;
+ /* align-items: center; */
 }
 
 .contact-form label{
    font-weight: 200;
 }
+
 
 
 /* Responsive */

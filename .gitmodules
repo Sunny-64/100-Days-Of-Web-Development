@@ -4,3 +4,6 @@
 [submodule "Secret"]
 	path = Secret
 	url = https://github.com/Sunny-64/Secret.git
+[submodule "Flash-Fiction"]
+	path = Flash-Fiction
+	url = https://github.com/Sunny-64/Flash-Fiction.git
