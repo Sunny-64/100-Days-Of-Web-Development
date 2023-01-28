@@ -7,3 +7,6 @@
 [submodule "Flash-Fiction"]
 	path = Flash-Fiction
 	url = https://github.com/Sunny-64/Flash-Fiction.git
+[submodule "News-App"]
+	path = News-App
+	url = https://github.com/Sunny-64/News-App.git
