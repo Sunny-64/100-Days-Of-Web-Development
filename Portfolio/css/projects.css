@@ -6,13 +6,10 @@
     justify-content: center;
 }
 
-.card{
-    width: 250px;
-    height: 250px;
-}
 .card img{
     height: 100%;
     width: 100%;
+    border-radius: 6px;
     object-fit: cover;
     opacity: 0.8;
     /* position: absolute; */
@@ -22,12 +19,16 @@
 }
 
 .card{
-    /* border: 1px solid #000; */
+    width: 250px;
+    height: 250px;
+    border-radius: 6px;
     position: relative;
     box-shadow: rgb(0 0 0 / 48%) -2px 7px 15px 1px;
     transition: 0.7s ease-in-out;
+    border-radius: 8px;
 }
 .card::before{
+    border-radius: 6px;
     content : ""; 
     position: absolute; 
     width: 100%;
