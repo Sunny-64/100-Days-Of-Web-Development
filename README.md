@@ -1,5 +1,6 @@
 ## Full Stack Projects
 - News App 
+- Flash fiction
 
 ## Frontend Projects
 - Tingod
