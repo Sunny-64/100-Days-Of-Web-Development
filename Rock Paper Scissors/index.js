@@ -30,16 +30,16 @@ function winner(userChose, compChose){
 function showResult(whoWon){
 
     // a centered winner text according to the result. 
+    document.querySelector(".players").style.gridTemplateColumns = "1fr"; 
     document.querySelector(".you").style.display = "none"; 
     document.querySelector(".comp").style.display = "none"; 
-    document.querySelector(".players").style.gridTemplateColumns = "1fr"; 
     document.querySelector(".players").style.justifyItems = "center"; 
     
     // Displays play again button and remove all the other buttons and center the play again button 
+    document.querySelector(".buttons").style.gridTemplateColumns = "1fr"; 
     document.querySelector(".rock-div").style.display = "none"; 
     document.querySelector(".paper-div").style.display = "none"; 
     document.querySelector(".scissor-div").style.display = "none"; 
-    document.querySelector(".buttons").style.gridTemplateColumns = "1fr"; 
     document.querySelector(".buttons").style.justifyItems = "center"; 
 
     document.querySelector(".result-div").style.display = "block"; 
@@ -109,3 +109,13 @@ function displayImages(userImgNo, compImgNo){
     }
 }
 
+/* 
+        ***** Tasks *****
+    # Add Scoring
+    # Stop the layout shape shifting
+    # Add Transitions to make the ux better
+    # Add images in the button 
+    # Add how to play option 
+    # Add Scoring - show how many times computer has won and user has won in one session
+    # Make code Scalable so adding new features is easier.
+*/
